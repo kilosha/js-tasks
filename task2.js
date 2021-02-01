@@ -13,7 +13,7 @@ let deleteVowels = function (string) {
     for (let i =0; i<arr.length; i++) {
         if (vowels.includes(arr[i])){
             arr.splice(i,1);
-            i--; 
+            i--;
         }
     }
     return arr.join("");
