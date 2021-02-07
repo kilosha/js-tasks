@@ -10,9 +10,8 @@ invert([1,-2,4,-5]) == [-1,2,-4,5]
 */
 
 
-let invert = function (array) {
-    return array.map(item=> item*-1);
-}
+let invert = array => array.map(item=> item*-1);
+
 
 console.log(invert([-1,-2,-4,-5]));
 console.log(invert([1,2,4,5]));
