@@ -6,7 +6,7 @@ This is an example! -> sihT si na !elpmaxe*/
 
 let stringReverse = function(string) {
     let result = string.split(" ").map(item => item.split("").reverse().join(""));
-    console.log (result.join(" "));
+    return result.join(" ");
 }
 
-stringReverse("This is an example!");
+console.log(stringReverse("This is an example!"));
