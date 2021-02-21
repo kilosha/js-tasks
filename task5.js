@@ -6,9 +6,8 @@
 //две функции, первая не учитывает случаи, где в строке есть пробелы, вторая учитывает
 let correctPIN = function (str) {
     let arr = str.split("").map(item=> +item);
-    if ((arr.length == 4 || arr.length == 6) && (!arr.includes(NaN))) {
-        return true;
-    } else return false;
+    return (arr.length == 4 || arr.length == 6) && (!arr.includes(NaN));
+    
 }
 
 console.log (correctPIN("12"));
@@ -23,11 +22,7 @@ let correctPIN2 = function (str) {
     if (arr.includes(" ")) {
         return false;
     } else {
-        if ((arr.length == 4 || arr.length == 6) && (!arr.map(item=> +item).includes(NaN))) {
-        return true;
-        } else {
-            return false;
-        }
+        return (arr.length == 4 || arr.length == 6) && (!arr.map(item=> +item).includes(NaN));
     }
 };
 
