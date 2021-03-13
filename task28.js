@@ -9,6 +9,7 @@ removeDuplicate(str)
 */
 
 
+//1 вариант
 let removeDuplicate = function (str) {
     let arr = str.split(",");
     let mass = [];
@@ -20,6 +21,14 @@ let removeDuplicate = function (str) {
     return mass.join(",");
 }
 
+
+//2 вариант
+
+let removeDuplicates = function (str) {
+   return Array.from(new Set (str.split(","))).join(",");
+};
+
 let str = "вишня,вишня,груша,слива,груша";
 
 console.log(removeDuplicate(str));
+console.log(removeDuplicates(str));
