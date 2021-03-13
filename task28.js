@@ -24,9 +24,7 @@ let removeDuplicate = function (str) {
 
 //2 вариант
 
-let removeDuplicates = function (str) {
-   return Array.from(new Set (str.split(","))).join(",");
-};
+let removeDuplicates = str => Array.from(new Set (str.split(","))).join(",");
 
 let str = "вишня,вишня,груша,слива,груша";
 
