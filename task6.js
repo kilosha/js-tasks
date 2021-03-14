@@ -22,12 +22,13 @@ let printer_error = function (str) {
                 errorCount++;
            }
        }
-    return (errorCount/str.length).toString();   
+    return (`${errorCount}/${str.length}`);   
     }  else return -1;
 }
 
 console.log(printer_error("aaabbbbhaijjjm"));
 console.log(printer_error("aaaxbbbbyyhwawiwjjjwwm"));
+console.log(printer_error("aaaxzxwbbbbyyhwawiwjjjwwm"));
 console.log(printer_error(""));
 console.log(printer_error("AAA"));
 console.log(printer_error("124as"));
