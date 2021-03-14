@@ -13,17 +13,17 @@ removeDuplicate(str)
 let removeDuplicate = function (str) {
     let arr = str.split(",");
     let mass = [];
-    for (let i=0; i < arr.length; i++) {
-        if (!mass.includes(arr[i])) {
-            mass.push(arr[i]);
+    arr.forEach(item => {
+        if (!mass.includes(item)) {
+            mass.push(item);
         } 
-    }
+    });
+
     return mass.join(",");
 }
 
 
 //2 вариант
-
 let removeDuplicates = str => Array.from(new Set (str.split(","))).join(",");
 
 let str = "вишня,вишня,груша,слива,груша";
