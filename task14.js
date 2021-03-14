@@ -3,10 +3,8 @@
 
 [12,423,54,1235,3,15,2,52] => 5*/
 
-let sum = function (arr) {
-    arr.sort((a,b) => a-b);
-    return arr[0]+arr[1];
-} 
+let sum = arr => arr.sort((a,b) => a-b).filter(item => item > 0).length >= 4 ? arr[0]+arr[1] : -1;
 
 console.log(sum([12,423,54,1235,3,15,2,52]));
 console.log(sum([1, 2134, 121, 32]));
+console.log(sum([2134, 121, 32]));
