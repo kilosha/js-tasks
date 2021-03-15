@@ -10,7 +10,7 @@ removeDuplicate(str)
 
 
 //1 вариант
-let removeDuplicate = function (str) {
+let removeDuplicatesWithForEach = function (str) {
     let arr = str.split(",");
     let mass = [];
     arr.forEach(item => {
@@ -22,11 +22,19 @@ let removeDuplicate = function (str) {
     return mass.join(",");
 }
 
-
 //2 вариант
-let removeDuplicates = str => Array.from(new Set (str.split(","))).join(",");
+let removeDuplicatesWithFilterAndIncludes= str => str.split(",").filter((item,index, array) => !array.includes(item, index+1)).join(","); // берёт последнее повторение
+
+//3 вариант
+let removeDuplicatesWithFilterAndLastIndexOf= str => str.split(",").filter((item,index, array) => array.indexOf(item)==index).join(",");
+
+//4 вариант
+let removeDuplicatesWithSet = str => Array.from(new Set (str.split(","))).join(",");
 
 let str = "вишня,вишня,груша,слива,груша";
 
-console.log(removeDuplicate(str));
-console.log(removeDuplicates(str));
+console.log(removeDuplicatesWithForEach(str));
+console.log(removeDuplicatesWithFilterAndIncludes(str));
+console.log(removeDuplicatesWithSet(str));
+console.log(removeDuplicatesWithFilterAndLastIndexOf(str));
+
