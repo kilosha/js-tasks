@@ -23,10 +23,10 @@ let removeDuplicatesWithForEach = function (str) {
 }
 
 //2 вариант
-let removeDuplicatesWithFilterAndIncludes= str => str.split(",").filter((item,index, array) => !array.includes(item, index+1)).join(","); // берёт последнее повторение
+let removeDuplicatesWithFilterAndIncludes = str => str.split(",").filter((item,index, array) => !array.includes(item, index+1)).join(","); // берёт последнее повторение
 
 //3 вариант
-let removeDuplicatesWithFilterAndLastIndexOf= str => str.split(",").filter((item,index, array) => array.indexOf(item)==index).join(",");
+let removeDuplicatesWithFilterAndLastIndexOf = str => str.split(",").filter((item,index, array) => array.indexOf(item)==index).join(",");
 
 //4 вариант
 let removeDuplicatesWithSet = str => Array.from(new Set (str.split(","))).join(",");
